@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VLC-like Media Player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="menu-bar">
+            <div class="menu-item">File</div>
+            <div class="menu-item">Edit</div>
+            <div class="menu-item">View</div>
+            <!-- Add more menu items as needed -->
+        </div>
+        <div class="video-section">
+            <video id="video-player" controls>
+                <!-- Add video source here -->
+                <source src="Sample-Video.mp4" type="video/mp4">
+                <!-- Add more video sources for different formats -->
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="player-controls">
+            <div class="playback-controls">
+                <button class="control-button" id="previous-button">Previous</button>
+                <button class="control-button" id="play-button">Play</button>
+                <button class="control-button" id="pause-button">Pause</button>
+                <button class="control-button" id="stop-button">Stop</button>
+                <button class="control-button" id="next-button">Next</button>
+            </div>
+
+            <!-- <div class="playback-controls">
+                <button class="control-button" id="play-pause-button">Play</button>
+                <button class="control-button" id="stop-button">Stop</button>
+                <button class="control-button" id="previous-button">Previous</button>
+                <button class="control-button" id="next-button">Next</button>
+            </div> -->
+            
+            <div class="speed-control">
+                <input type="range" class="speed-slider" id="speed-slider" min="0.5" max="2" step="0.1" value="1">
+                <span id="speed-label">1x</span>
+            </div>
+            
+
+
+            <div class="volume-control">
+                <input type="range" class="volume-slider" id="volume-slider" min="0" max="100" value="50">
+                <button class="mute-button" id="mute-button">Mute</button>
+            </div>
+            <div class="progress-bar">
+                <input type="range" class="progress-slider" id="progress-slider" min="0" max="100" value="0">
+                <span id="current-time">00:00</span> / <span id="total-duration">00:00</span>
+            </div>
+        </div>
+        <div class="playlist">
+            <h2>Playlist</h2>
+            <ul class="playlist-items">
+                <!-- List of media files -->
+                <li>Media File 1</li>
+                <li>Media File 2</li>
+                <li>Media File 3</li>
+                <!-- Add more media files as needed -->
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
